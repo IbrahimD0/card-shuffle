@@ -26,47 +26,6 @@ Deck Shuffle and Deal is a feature-rich Angular application that simulates a sta
 ## Requirements
 
 ### Development
-- Node.js (>= 14.x)
-- npm (>= 7.x)
-- Angular CLI (>= 14.x)
-  ```bash
-  npm install -g @angular/cli
-  ```
-## Setup and Installation
-
-1. **Clone the repository**:  
-   Use the following command to clone the repository:  
-   ```bash
-   git clone https://github.com/ibrahimd0/card-shuffle
-   ```
-# Deck Shuffle and Deal
-
-A web application for managing a deck of cards: shuffle, deal, reset, and track history!
-
----
-
-## Table of Contents
-- [About](#about)
-- [Requirements](#requirements)
-  - [Development](#development)
-- [App Walkthrough](#app-walkthrough)
-- [Authors](#authors)
-
----
-
-## About
-
-Deck Shuffle and Deal is a feature-rich Angular application that simulates a standard 52-card deck. It provides functionalities to shuffle the deck, deal cards, reset the deck, and view the history of dealt hands. 
-
-**Tech Stack:**  
-- **Frontend:** Angular, Angular Material  
-- **Database:** Firebase (Firestore)
-
----
-
-## Requirements
-
-### Development
 - Node.js 
 - npm 
 - Angular CLI 
@@ -74,7 +33,7 @@ Deck Shuffle and Deal is a feature-rich Angular application that simulates a sta
   npm install -g @angular/cli
   ```
 
-## Setup and Installation
+### Setup and Installation
 1. **Clone the repository**: 
 Use the following command to clone the repository:
 ```
