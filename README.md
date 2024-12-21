@@ -77,9 +77,9 @@ Open the application
 In your web browser, navigate to:
 http://localhost:4200
 
-##App Walkthrough
+## App Walkthrough
 
-#Key Features:
+Key Features:
 - Shuffle Deck: Randomizes the order of cards in the deck.
 - Deal Cards: Deals a specified number of cards and displays them visually.
 - Reset Deck: Restores the full deck of 52 cards.
@@ -89,7 +89,7 @@ Deal Cards: Enter the number of cards you want to deal and click "Deal."
 Reset Deck: Click the "Reset" button to restore the full deck.
 History: Click "View History" to review past deals.
 
-##Authors
+## Authors
 - [@ibrahimd0](https://github.com/ibrahimd0)
 
 
