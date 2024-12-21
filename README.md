@@ -50,31 +50,32 @@ Run the command to install all necessary dependencies:
 ```
 2. **Setup Firebase firestore**: 
 
--Go to the Firebase Console and create a new Firebase project.
--Enable Firestore in your Firebase project settings.
+Go to the Firebase Console and create a new Firebase project.
+Enable Firestore in your Firebase project settings.
 
--Copy the firebaseConfig inside firebase.service.ts
-export const environment = {
-  production: false,
-  firebase: {
-    apiKey: 'your-api-key',
-    authDomain: 'your-auth-domain',
-    projectId: 'your-project-id',
-    storageBucket: 'your-storage-bucket',
-    messagingSenderId: 'your-messaging-sender-id',
-    appId: 'your-app-id',
-  },
-};
--Start the development server
--Launch the Angular development server:
+Copy the firebaseConfig inside firebase.service.ts
+
+  ```bash
+    firebaseConfig: {
+        apiKey: 'your-api-key',
+        authDomain: 'your-auth-domain',
+        projectId: 'your-project-id',
+        storageBucket: 'your-storage-bucket',
+        messagingSenderId: 'your-messaging-sender-id',
+        appId: 'your-app-id',
+      }
+ ```
+
+3. Start the development server
+Launch the Angular development server:
 
 
 ```bash
    ng serve
 ```
--Open the application
--In your web browser, navigate to:
--http://localhost:4200
+Open the application
+In your web browser, navigate to:
+http://localhost:4200
 
 ##App Walkthrough
 
