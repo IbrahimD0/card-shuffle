@@ -23,9 +23,9 @@ Deck Shuffle and Deal is a feature-rich Angular application that simulates a sta
 
 ---
 
-## Requirements
+## Development
 
-### Development
+### Requirements
 - Node.js 
 - npm 
 - Angular CLI 
