@@ -93,4 +93,16 @@ History: Click "View History" to review past deals.
 - [@ibrahimd0](https://github.com/ibrahimd0)
 
 
+Assumptions made: 
+User gets to keep every cards dealt until reset is clicked
+UI/UX design is based on perference
+Can use any Angular version
+Can use tailwind css
+Can use any repo format
+
+
+
+
+
+
 
