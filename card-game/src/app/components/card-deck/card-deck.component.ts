@@ -4,18 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { DeckservicesService } from '../../services/deckservices.service';
 import { CardComponent } from '../card/card.component';
 import { MatIconModule } from '@angular/material/icon';
-
-interface Card {
-  suit: string;
-  value: string;
-  drawn: number;
-}
+import { Card } from '../../type';
 
 @Component({
   selector: 'app-card-deck',
   standalone: true,
   imports: [CommonModule, FormsModule, CardComponent, MatIconModule],
   template: `
+
     <div class="container mx-auto p-4">
       <div class="text-center mb-4 text-gray-700">
         <p>Remaining cards: {{ remainingCards.length }}</p>
@@ -77,6 +73,7 @@ interface Card {
         </button>
       </div>
     </div>
+
   `,
   styles: [
     `
@@ -92,26 +89,36 @@ interface Card {
   ],
 })
 export class CardDeckComponent {
+
+  //varaibles 
   dealtCards: Card[] = [];
   remainingCards: Card[] = [];
   numberOfCardsToDeal: number = 1;
   isValidCardCount: boolean = true;
 
+
   constructor(private deckService: DeckservicesService) {
     this.loadInitialState();
   }
 
+
+
+  //methods
+
+  //load initial state by calling the loadInitialDeck method from the deck service
   private async loadInitialState() {
     await this.deckService.loadInitialDeck();
     this.updateLocalState();
   }
 
+  //update local state by calling the getRemainingCards and getDrawnCards methods from the deck service
   private updateLocalState() {
     this.remainingCards = this.deckService.getRemainingCards();
     this.dealtCards = this.deckService.getDrawnCards();
     this.validateCardCount();
   }
 
+  //validate the card count by checking if the number of cards to deal is between 1 and the number of remaining cards
   validateCardCount(): void {
     this.isValidCardCount =
       this.numberOfCardsToDeal >= 1 &&
@@ -119,18 +126,20 @@ export class CardDeckComponent {
       Number.isInteger(this.numberOfCardsToDeal);
   }
 
+  //shuffle the deck by calling the shuffleDeck method from the deck service and updating the local state
   async shuffleDeck(): Promise<void> {
     await this.deckService.shuffleDeck();
     this.updateLocalState();
   }
 
+  //deal cards by calling the dealCards method from the deck service and updating the local state
   async dealCards(): Promise<void> {
     if (!this.isValidCardCount) return;
-
     await this.deckService.dealCards(this.numberOfCardsToDeal);
     this.updateLocalState();
   }
 
+  //reset the deck by calling the resetDeck method from the deck service, updating the local state, and setting the number of cards to deal to 1
   async resetDeck(): Promise<void> {
     await this.deckService.resetDeck();
     this.updateLocalState();

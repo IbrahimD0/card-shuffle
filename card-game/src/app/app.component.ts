@@ -7,9 +7,9 @@ import { CardDeckComponent } from "./components/card-deck/card-deck.component";
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, CardDeckComponent],
   template: `
+
     <app-navbar />
     <app-card-deck />
-
     <router-outlet />
   `,
   styles: [],

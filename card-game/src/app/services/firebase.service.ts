@@ -3,11 +3,7 @@ import { initializeApp, FirebaseApp, getApps } from 'firebase/app';
 import { getFirestore, Firestore, doc, getDoc, setDoc } from 'firebase/firestore';
 import { environment } from '../../environments/environment';
 
-interface Card {
-  suit: string;
-  value: string;
-  drawn: number;
-}
+import { Card } from '../type';
 
 const firebaseConfig = {
   apiKey: environment.firebase.apiKey,
